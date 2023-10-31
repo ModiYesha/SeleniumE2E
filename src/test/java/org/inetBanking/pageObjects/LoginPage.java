@@ -21,6 +21,9 @@ public class LoginPage {
     @FindBy(name = "btnReset")
     WebElement btnReset;
 
+    @FindBy(partialLinkText = "Log out")
+    WebElement btnLogout;
+
     public void setTxtUsername(String uname) {
         txtUsername.sendKeys(uname);
     }
@@ -29,5 +32,8 @@ public class LoginPage {
     }
     public void clickLogin() {
         btnLogin.click();
+    }
+    public void clickLogout(){
+        btnLogout.click();
     }
 }
