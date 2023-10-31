@@ -10,13 +10,12 @@ public class TC_01_LoginTest extends BaseClass {
 
     @Test
     public void LoginTest() throws InterruptedException {
-        driver.get(baseURL);
         LoginPage lp = new LoginPage(driver);
         lp.setTxtUsername(userName);
         lp.setTxtPassword(userPassword);
         lp.clickLogin();
         //driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        Thread.sleep(1000);
+        //Thread.sleep(1000);
 
         if(driver.getTitle().equals("Guru99 Bank Manager HomePage")){
             Assert.assertTrue(true);
